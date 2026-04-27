@@ -1,305 +1,104 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <title>P3 Shop</title>
-  <style>
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEsa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-body {
-  background: #000;
-  color: white;
-}
-
-/* HEADER */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
-  border-bottom: 1px solid #222;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.logo span {
-  color: #ff4d00;
-}
-
-nav a {
-  margin: 0 15px;
-  color: #aaa;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-nav a:hover {
-  color: white;
-}
-
-/* BUTTONS */
-.btn-primary {
-  background: #ff4d00;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  color: white;
-  cursor: pointer;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 1px solid #444;
-  padding: 10px 18px;
-  border-radius: 6px;
-  color: white;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-/* HERO */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 60px;
-  height: 90vh;
-}
-
-/* TEXTE */
-.hero-left {
-  max-width: 550px;
-}
-
-.tag {
-  background: #1a1a1a;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 12px;
-  color: #ccc;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-.hero-left h1 {
-  font-size: 68px;
-  line-height: 1.05;
-  color: #eae2d6;
-  margin-bottom: 20px;
-}
-
-.hero-left p {
-  color: #aaa;
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-
-.buttons {
-  display: flex;
-  gap: 15px;
-}
-
-/* VISUEL DROITE (EFFET CERCLE) */
-.hero-right {
-  position: relative;
-  width: 500px;
-  height: 500px;
-}
-
-/* cercle principal */
-.ring {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: conic-gradient(
-    from 0deg,
-    #ff4d00,
-    #ff9900,
-    #ff4d00,
-    #000000,
-    #000000
-  );
-  filter: blur(10px);
-}
-
-/* cercle interne */
-.ring.small {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, black 60%, transparent 70%);
-}
-
-/* glow */
-.hero-right::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  height: 600px;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(255,100,0,0.3), transparent 70%);
-  filter: blur(40px);
-}
-.about {
-  padding: 80px 60px;
-  text-align: center;
-  background: #0a0a0a;
-}
-
-.about h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.about p {
-  color: #aaa;
-  max-width: 600px;
-  margin: auto;
-  margin-bottom: 40px;
-}
-
-.about-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.box {
-  background: #111;
-  padding: 20px;
-  border-radius: 10px;
-  width: 250px;
-}
-.contact {
-  padding: 80px 60px;
-  text-align: center;
-}
-
-.contact h2 {
-  margin-bottom: 30px;
-}
-
-form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 12px;
-  border: none;
-  border-radius: 5px;
-  background: #111;
-  color: white;
-}
-
-button {
-  background: #ff4d00;
-  border: none;
-  padding: 12px;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-  </style>
+    <link rel="stylesheet" href="./public/css/index.css" />
 </head>
+
 <body>
 
-<header>
-  <div class="logo">Shop <span>Esa</span></div>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-name">ShopEsa</div>
+            <div class="logo-sub">Luxury Collection</div>
+        </div>
+        <nav class="nav-links">
+            <a href="">Accueil</a>
+            <a href="#">A propos</a>
+            <a href="./views/product.php">Boutique</a>
+            <a href="./views/login.php">Se connecter</a>
+        </nav>
+    </header>
 
-  <nav>
-    <a href="#">Acceuil</a>
-    <a href="#about">À propos</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-season">Collection 2026</div>
+            <h1>L'art de vivre<br>dans sa plus<br><em>pure expression</em></h1>
+            <p>Des pièces d'exception soigneusement sélectionnées pour ceux qui refusent de faire des compromis sur la qualité et le raffinement.</p>
+            <img src="./public/images/hero.jpg" alt="Collection Printemps 2026" class="hero-image">
+            <div class="hero-btns">
+                <button class="btn-gold">Découvrir</button>
+                <button class="btn-ghost">Lookbook</button>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-cat">
+                <video src="./public/images/fashion.mp4" autoplay loop muted class="hero-video"></video>
+                <span class="hero-cat-name">Mode</span>
+            </div>
+            <div class="hero-cat">
+                <video width="100%" height="auto" src="./public/images/daimond.mp4" autoplay loop muted class="hero-video"></video>
+                <span class="hero-cat-name">Joaillerie</span>
+            </div>
+            <div class="hero-cat">
+                <video width="100%" height="auto" src="./public/images/maison.mp4" autoplay loop muted class="hero-video"></video>
 
-  <div class="actions">
-    <button class="btn-outline">Se connecter</button>
-    <button class="btn-primary">S'inscrire</button>
-  </div>
-</header>
+                <span class="hero-cat-name">Maison</span>
+            </div>
+            <div class="hero-cat">
+                <video width="100%" height="auto" src="./public/images/beauty.mp4" autoplay loop muted class="hero-video"></video>
+                <span class="hero-cat-name">Beauté</span>
+            </div>
+        </div>
+    </section>
 
-<section class="hero">
-
-  <div class="hero-left">
-    <div class="tag">New - Try our Motion Integration →</div>
-
-    <h1>
-      Découvrez nos <br>
-      meilleurs produits <br>
-      au meilleur prix
-    </h1>
-
-    <p>
-      Achetez facilement vos produits avec livraison rapide et sécurisée.
-    </p>
-
-    <div class="buttons">
-      <button class="btn-primary">S'inscrire</button>
-      <button class="btn-outline">Se connecter</button>
-    </div>
-  </div>
-
-  <!-- VISUEL DROITE -->
-  <div class="hero-right">
-    <div class="ring"></div>
-    <div class="ring small"></div>
-  </div>
-
-</section>
-<section class="about" id="about">
-  <h2>À propos de nous</h2>
-
-  <p>
-    Nous sommes une plateforme e-commerce qui vous permet d’acheter
-    facilement vos produits avec sécurité, rapidité et confiance.
-  </p>
-
-  <div class="about-boxes">
-    <div class="box">
-      <h3>Fiabilité</h3>
-      <p>Des produits vérifiés et de qualité.</p>
+    <div class="marquee-bar">
+        <div class="marquee-track" id="marquee"></div>
     </div>
 
-    <div class="box">
-      <h3>Rapidité</h3>
-      <p>Livraison rapide partout.</p>
+    <section class="section">
+        <div class="section-head">
+            <div>
+                <div class="section-eyebrow">Sélection du moment</div>
+                <h2>Pièces d'Exception</h2>
+            </div>
+            <a class="see-all" href="./views/product.php">Voir tout</a>
+        </div>
+        <div class="products-grid" id="grid"></div>
+    </section>
+
+    <div class="editorial">
+        <div class="editorial-block">
+            <div class="editorial-num">01</div>
+            <div class="editorial-eyebrow">Édition Limitée</div>
+            <h3>La Montre Impériale<br>Collection Nuit</h3>
+            <p>Une pièce horlogère d'exception, façonnée à la main par nos maîtres artisans genevois.</p>
+            <img src="./public/images/watch.jpg" alt="Montre Impériale" class="editorial-image">
+        </div>
+        <div class="editorial-block">
+            <div class="editorial-num">02</div>
+            <div class="editorial-eyebrow">Art de Vivre</div>
+            <h3>L'Appartement<br>Parisien</h3>
+            <p>Notre curatelle Maison révèle une sélection d'objets rares pour sublimer vos intérieurs.</p>
+            <img src="./public/images/apartment.jpg" alt="Appartement Parisien" class="editorial-image">
+        </div>
     </div>
 
-    <div class="box">
-      <h3>Sécurité</h3>
-      <p>Paiement sécurisé garanti.</p>
+    <div class="testimonial">
+        <p class="test-quote">"ShopEsa incarne ce que le luxe a de plus noble : l'invisible perfection des détails."</p>
+        <div class="test-author">— Amara D., cliente depuis 2022</div>
     </div>
-  </div>
-</section>
-<section class="contact" id="contact">
-  <h2>Contactez-nous</h2>
-
-  <form>
-    <input type="text" placeholder="Votre nom" required>
-    <input type="email" placeholder="Votre email" required>
-    <textarea placeholder="Votre message"></textarea>
-
-    <button type="submit">Envoyer</button>
-  </form>
-</section>
-
+    <?php
+    include("./public/includes/footer.php");
+    ?>
+    <script src="./public/js/index.js"></script>
 </body>
+
 </html>
