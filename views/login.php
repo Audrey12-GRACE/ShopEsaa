@@ -1,6 +1,4 @@
 
-$r=$_SESSION["id_user"]? $panier->rowCount():0;
-                    echo $r;
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -18,7 +16,7 @@ $r=$_SESSION["id_user"]? $panier->rowCount():0;
         <div class="logo">Shop<span>Esa</span></div>
         <div class="subtitle">Connectez-vous à votre compte</div>
 
-        <form action="" method="POST">
+        <form id="form-login">
 
             <div class="input-group">
                 <label>Email</label>
@@ -38,13 +36,15 @@ $r=$_SESSION["id_user"]? $panier->rowCount():0;
             <button type="submit" class="btn">Se connecter</button>
 
             <div class="footer">
-                vous n'avez pas encore de compte ?
+                <p>vous n'avez pas encore de compte ?</p>
                 <a href="./register.php">Créer un compte</a>
             </div>
 
         </form>
 
     </div>
+
+    <script src="../public/js/login.js"></script>
 
 </body>
 

@@ -18,7 +18,10 @@ if(isset($_SESSION["id_user"])){
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
+<<<<<<< HEAD
     
+=======
+>>>>>>> 1afc6f546fe01cf5498a687f1d7a6cba3182306b
     <link rel="stylesheet" href="../public/css/product.css" />
 </head>
 

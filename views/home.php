@@ -34,6 +34,11 @@
                     <a class="button primary" href="product.php">Voir la boutique</a>
                     <a class="button secondary" href="cart.php">Consulter mon panier</a>
                 </div>
+                <div class="hero-badges">
+                    <div class="badge">Livraison offerte</div>
+                    <div class="badge">Paiement sécurisé</div>
+                    <div class="badge">Support 24/7</div>
+                </div>
             </div>
             <div class="hero-visual">
                 <div class="hero-card">
@@ -75,6 +80,26 @@
                 <div class="card">
                     <h3>Panier</h3>
                     <p>0 article</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="top-categories">
+            <div class="section-title">Catégories populaires</div>
+            <p class="section-sub">Explorez les univers les plus demandés de ShopEsa et trouvez votre prochaine inspiration.</p>
+
+            <div class="categories-grid">
+                <div class="category-card">
+                    <h4>Maison & déco</h4>
+                    <p>Des pièces uniques pour créer un intérieur chaleureux et élégant.</p>
+                </div>
+                <div class="category-card">
+                    <h4>Beauté & bien-être</h4>
+                    <p>Soins, parfums et routines pour une expérience shopping plaisir.</p>
+                </div>
+                <div class="category-card">
+                    <h4>Mode & accessoires</h4>
+                    <p>Découvrez les tendances qui donnent du style à votre quotidien.</p>
                 </div>
             </div>
         </section>

@@ -18,23 +18,23 @@ header {
     position: sticky;
     top: 0;
     z-index: 10;
-    background: rgba(10, 10, 10, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(10, 10, 10, 0.96);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 22px 60px;
+    padding: 24px 60px;
     max-width: 1320px;
     margin: auto;
 }
 
 .logo-name {
-    font-size: 28px;
-    font-weight: 700;
+    font-size: 32px;
+    font-weight: 800;
     letter-spacing: 2px;
 }
 
@@ -54,7 +54,7 @@ header {
     text-decoration: none;
     color: #ccc;
     font-size: 14px;
-    padding: 10px 14px;
+    padding: 10px 16px;
     border-radius: 999px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -73,11 +73,26 @@ main {
 }
 
 .hero {
+    position: relative;
     display: grid;
-    grid-template-columns: 1.25fr 0.85fr;
+    grid-template-columns: 1.2fr 0.85fr;
     align-items: center;
     gap: 40px;
-    padding: 90px 60px 40px;
+    padding: 100px 60px 40px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 20% 20%, rgba(240, 193, 75, 0.16), transparent 20%),
+        radial-gradient(circle at 80% 5%, rgba(255, 255, 255, 0.08), transparent 18%);
+    pointer-events: none;
+}
+
+.hero-copy {
+    position: relative;
+    z-index: 1;
 }
 
 .hero-copy .eyebrow {
@@ -98,7 +113,7 @@ main {
 .hero p {
     color: #c8c8c8;
     font-size: 1.05rem;
-    max-width: 720px;
+    max-width: 670px;
     line-height: 1.75;
 }
 
@@ -136,9 +151,47 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 18px;
+    border-radius: 999px;
+    background: rgba(240, 193, 75, 0.16);
+    color: #f0c14b;
+    border: 1px solid rgba(240, 193, 75, 0.24);
+    font-size: 0.95rem;
+}
+
 .hero-visual {
+    position: relative;
     display: flex;
     justify-content: flex-end;
+}
+
+.hero-visual::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 360px;
+    height: 360px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(240, 193, 75, 0.26), transparent 55%);
+    z-index: 0;
+}
+
+.visual-panel {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 520px;
 }
 
 .hero-card {
@@ -147,7 +200,7 @@ main {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 32px;
-    padding: 32px;
+    padding: 34px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -179,7 +232,7 @@ main {
 }
 
 .hero-stat {
-    padding: 22px;
+    padding: 24px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.06);
     border: 1px solid rgba(255, 255, 255, 0.06);
@@ -232,7 +285,7 @@ main {
 .card:hover {
     transform: translateY(-6px);
     border-color: #f0c14b;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.24);
 }
 
 .card h3 {
@@ -244,6 +297,41 @@ main {
 .card p {
     color: #c3c3c3;
     line-height: 1.75;
+}
+
+.top-categories {
+    padding: 40px 60px 0;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.category-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 28px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-6px);
+    border-color: #f0c14b;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.18);
+}
+
+.category-card h4 {
+    margin-bottom: 14px;
+    font-size: 1.1rem;
+}
+
+.category-card p {
+    line-height: 1.75;
+    color: #b8b8b8;
 }
 
 .features {
@@ -291,7 +379,8 @@ main {
     }
 
     .dashboard,
-    .features {
+    .features,
+    .categories-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
@@ -317,11 +406,13 @@ main {
     }
 
     .dashboard,
-    .features {
+    .features,
+    .categories-grid {
         grid-template-columns: 1fr;
     }
 
     .section-overview,
+    .top-categories,
     .features {
         padding: 30px 30px 60px;
     }

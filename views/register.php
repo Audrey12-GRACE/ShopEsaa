@@ -15,7 +15,7 @@
         <div class="logo">Shop<span>Esa</span></div>
         <div class="subtitle">Créer votre compte</div>
 
-        <form action="" method="POST">
+        <form id="form-register">
 
             <div class="input-group">
                 <label>Nom complet</label>
@@ -29,7 +29,7 @@
 
             <div class="input-group">
                 <label>Téléphone</label>
-                <input type="text" name="telephone" placeholder="Entrez votre numéro" required>
+                <input type="tel" name="tel" placeholder="Entrez votre numéro" required>
             </div>
 
             <div class="input-group">
@@ -45,13 +45,16 @@
             <button type="submit" class="btn">S'inscrire</button>
 
             <div class="footer">
-                Vous avez déjà un compte ?
+                <p>Vous avez déjà un compte ?</p>
                 <a href="./login.php">Se connecter</a>
             </div>
+            
 
         </form>
 
     </div>
+
+    <script src="../public/js/register.js"></script>
 
 </body>
 
