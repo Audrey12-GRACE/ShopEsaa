@@ -49,6 +49,8 @@ body{font-family:'Montserrat',sans-serif;background:var(--black);color:var(--tex
 .pcard{background:var(--card);cursor:pointer;display:flex;flex-direction:column;}
 .pcard-img{height:220px;overflow:hidden;background:var(--mid);position:relative;}
 .pcard-img-inner{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;transition:transform .5s ease;}
+.pcard-img-inner a{pointer-events:auto;display:flex;align-items:center;justify-content:center;width:100%;height:100%;}
+.pcard-img-inner svg{width:52px;height:52px;}
 .pcard img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
 .pcard:hover img{transform:scale(1.05);}
 .pcard:hover .pcard-img-inner{transform:scale(1.04);}
