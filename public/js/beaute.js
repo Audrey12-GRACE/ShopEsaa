@@ -12,18 +12,18 @@ const svgs = {
 };
 
 const products = [
-  { id: 'veste-cachemire-noir', name: 'Veste Cachemire Noir', cat: 'Mode', price: "285 000", old: "340 000", badge: "sale", stars: 5, image: "../public/images/hero.jpg" },
-  { id: 'sac-cuir-grain-nappa', name: 'Sac Cuir Grain Nappa', cat: 'Mode', price: "420 000", old: "", badge: "new", stars: 5, image: "../public/images/hero.jpg" },
-  { id: 'chemise-soie-sauvage', name: 'Chemise Soie Sauvage', cat: 'Mode', price: "195 000", old: "", badge: "", stars: 4, image: "../public/images/hero.jpg" },
-  { id: 'pantalon-laine-m-rinos', name: 'Pantalon Laine Mérinos', cat: 'Mode', price: "320 000", old: "380 000", badge: "sale", stars: 5, image: "../public/images/hero.jpg" },
-  { id: 'blazer-laine-vierge', name: 'Blazer Laine Vierge', cat: 'Mode', price: "650 000", old: "", badge: "new", stars: 5, image: "../public/images/hero.jpg" },
-  { id: 'robe-soie-empire', name: 'Robe Soie Empire', cat: 'Mode', price: "480 000", old: "", badge: "", stars: 4, image: "../public/images/hero.jpg" },
-  { id: 'manteau-cachemire-beige', name: 'Manteau Cachemire Beige', cat: 'Mode', price: "890 000", old: "1 050 000", badge: "sale", stars: 5, image: "../public/images/hero.jpg" },
-  { id: 'charpe-soie-herm-s', name: 'Écharpe Soie Hermès', cat: 'Mode', price: "380 000", old: "", badge: "new", stars: 5, image: "../public/images/hero.jpg" },
-  { id: 'ceinture-cuir-crocodile', name: 'Ceinture Cuir Crocodile', cat: 'Mode', price: "295 000", old: "", badge: "", stars: 4, image: "../public/images/hero.jpg" },
-  { id: 'chapeau-feutre-borsalino', name: 'Chapeau Feutre Borsalino', cat: 'Mode', price: "450 000", old: "", badge: "", stars: 5, image: "../public/images/hero.jpg" },
-  { id: 'gants-cuir-nappa', name: 'Gants Cuir Nappa', cat: 'Mode', price: "180 000", old: "", badge: "new", stars: 4, image: "../public/images/hero.jpg" },
-  { id: 'pull-cachemire-col-v', name: 'Pull Cachemire Col V', cat: 'Mode', price: "420 000", old: "520 000", badge: "sale", stars: 5, image: "../public/images/hero.jpg" },
+  { id: 's-rum-visage-caviar', name: 'Sérum Visage Caviar', cat: 'Beauté', price: "68 000", old: "", badge: "new", stars: 4, image: "../public/images/hero.jpg" },
+  { id: 'cr-me-hydratante-luxe', name: 'Crème Hydratante Luxe', cat: 'Beauté', price: "95 000", old: "", badge: "", stars: 5, image: "../public/images/hero.jpg" },
+  { id: 'huile-essentielle-rose', name: 'Huile Essentielle Rose', cat: 'Beauté', price: "42 000", old: "52 000", badge: "sale", stars: 4, image: "../public/images/hero.jpg" },
+  { id: 'masque-visage-or', name: 'Masque Visage Or', cat: 'Beauté', price: "78 000", old: "", badge: "new", stars: 5, image: "../public/images/hero.jpg" },
+  { id: 'baume-l-vres-miel', name: 'Baume à Lèvres Miel', cat: 'Beauté', price: "25 000", old: "", badge: "", stars: 4, image: "../public/images/hero.jpg" },
+  { id: 'parfum-nectar-floral', name: 'Parfum Nectar Floral', cat: 'Beauté', price: "120 000", old: "", badge: "new", stars: 5, image: "../public/images/hero.jpg" },
+  { id: 'lotion-corps-vanille', name: 'Lotion Corps Vanille', cat: 'Beauté', price: "55 000", old: "68 000", badge: "sale", stars: 4, image: "../public/images/hero.jpg" },
+  { id: 'soin-anti-ge-premium', name: 'Soin Anti-Âge Premium', cat: 'Beauté', price: "145 000", old: "", badge: "", stars: 5, image: "../public/images/hero.jpg" },
+  { id: 'eau-micellaire-pure', name: 'Eau Micellaire Pure', cat: 'Beauté', price: "38 000", old: "", badge: "new", stars: 4, image: "../public/images/hero.jpg" },
+  { id: 'cr-me-mains-soie', name: 'Crème Mains Soie', cat: 'Beauté', price: "32 000", old: "", badge: "", stars: 4, image: "../public/images/hero.jpg" },
+  { id: 'huile-corps-amande', name: 'Huile Corps Amande', cat: 'Beauté', price: "48 000", old: "58 000", badge: "sale", stars: 5, image: "../public/images/hero.jpg" },
+  { id: 'spray-fixant-cheveux', name: 'Spray Fixant Cheveux', cat: 'Beauté', price: "29 000", old: "", badge: "new", stars: 4, image: "../public/images/hero.jpg" },
 ];
 
 let cart = 0;

@@ -13,12 +13,12 @@ if(isset($_SESSION["id_user"])){
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ShopEsa</title>
+    <title>ShopEsa - Art de Vivre</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet" />
 
-    
+
     <link rel="stylesheet" href="../public/css/product.css" />
 </head>
 
@@ -36,7 +36,7 @@ if(isset($_SESSION["id_user"])){
             <a href="mode.php">Mode</a>
             <a href="joaillerie.php">Joaillerie</a>
             <a href="beaute.php">Beauté</a>
-            <a href="art_de_vivre.php">Art de Vivre</a>
+            <a href="art_de_vivre.php" class="active">Art de Vivre</a>
         </nav>
         <div class="header-icons">
             <button class="icon-btn" aria-label="Rechercher">
@@ -59,7 +59,7 @@ if(isset($_SESSION["id_user"])){
                     </svg>
                 </button>
                 <div class="cart-dot" id="cart-num">
-                    <?php 
+                    <?php
                     $r=isset($_SESSION["id_user"])? $panier->rowCount():0;
                     echo $r;
                     ?>
@@ -68,38 +68,6 @@ if(isset($_SESSION["id_user"])){
         </div>
     </header>
 
-    <!--<section class="hero">
-    <div class="hero-left">
-      <div class="hero-season">Collection Printemps 2026</div>
-      <h1>L'art de vivre<br>dans sa plus<br><em>pure expression</em></h1>
-      <p>Des pièces d'exception soigneusement sélectionnées pour ceux qui refusent de faire des compromis sur la qualité et le raffinement.</p>
-      <img src="../public/images/hero.jpg" alt="Collection Printemps 2026" class="hero-image">
-      <div class="hero-btns">
-        <button class="btn-gold">Découvrir</button>
-        <button class="btn-ghost">Lookbook</button>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-cat">
-        <video src="../public/images/fashion.mp4" autoplay loop muted class="hero-video"></video>
-        <span class="hero-cat-name">Mode</span>
-      </div>
-      <div class="hero-cat">
-        <video width="100%" height="auto" src="../public/images/daimond.mp4" autoplay loop muted class="hero-video"></video>
-        <span class="hero-cat-name">Joaillerie</span>
-      </div>
-      <div class="hero-cat">
-        <video width="100%" height="auto" src="../public/images/maison.mp4" autoplay loop muted class="hero-video"></video>
-
-        <span class="hero-cat-name">Maison</span>
-      </div>
-        <div class="hero-cat">
-        <video width="100%" height="auto" src="../public/images/beauty.mp4" autoplay loop muted class="hero-video"></video>
-        <span class="hero-cat-name">Beauté</span>
-      </div>
-    </div>
-  </section>-->
-
     <div class="marquee-bar">
         <div class="marquee-track" id="marquee"></div>
     </div>
@@ -107,10 +75,9 @@ if(isset($_SESSION["id_user"])){
     <section class="section">
         <div class="section-head">
             <div>
-                <div class="section-eyebrow">Sélection du moment</div>
-                <h2>Pièces d'Exception</h2>
+                <div class="section-eyebrow">Collection Art de Vivre</div>
+                <h2>Art de Vivre</h2>
             </div>
-            <!--<a class="see-all" href="#">Voir tout</a>-->
         </div>
         <div class="products-grid" id="grid"></div>
     </section>
@@ -141,7 +108,7 @@ if(isset($_SESSION["id_user"])){
     include("../public/includes/footer.php");
     ?>
     <script src="../public/js/cart-storage.js"></script>
-    <script src="../public/js/product.js"></script>
+    <script src="../public/js/art_de_vivre.js"></script>
 </body>
 
 </html>
